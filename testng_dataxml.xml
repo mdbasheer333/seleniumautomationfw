@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<test name="valid user test ">
+		<parameter name="username" value="bash@gmail.com"></parameter>
+		<parameter name="password" value="pass#1234"></parameter>
+		<classes>
+			<class name="com.codingmentor.project.testngprog.pack6.MyTestNG1" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="invalid use test">
+		<parameter name="username" value="dummy@gmail.com"></parameter>
+		<parameter name="password" value="dummy#1234"></parameter>
+		<classes>
+			<class name="com.codingmentor.project.testngprog.pack6.MyTestNG1" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
