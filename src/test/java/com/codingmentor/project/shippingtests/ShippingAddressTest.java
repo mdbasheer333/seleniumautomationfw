@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import com.codingmentor.project.BaseTest;
 import com.codingmentor.project.pageobjects.LoginPage;
 import com.codingmentor.project.pageobjects.ShippingAddressPage;
+import com.codingmentor.project.utils.PropertyUtil;
 
 public class ShippingAddressTest extends BaseTest{
 
@@ -18,6 +19,7 @@ public class ShippingAddressTest extends BaseTest{
 
 		ShippingAddressPage shippingAddressPage = new ShippingAddressPage(driver);
 		shippingAddressPage.shippingAddressEntry();
+		
 	}
 
 }

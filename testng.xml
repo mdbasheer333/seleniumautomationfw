@@ -11,55 +11,6 @@
 			<class name="com.codingmentor.project.shippingtests.ShippingAddressVerifyTest" />
 		</classes>
 	</test> <!-- Test -->
-
-	<test name="ChromeTest2">
-		<parameter name="browserType" value="chrome"></parameter>
-		<parameter name="username" value="fn@gmail.com"></parameter>
-		<parameter name="password" value="fn@gmail.com"></parameter>
-		<classes>
-			<class name="com.codingmentor.project.shippingtests.ShippingAddressTest" />
-			<class name="com.codingmentor.project.shippingtests.ShippingAddressVerifyTest" />
-		</classes>
-	</test> <!-- Test -->
 	
-	<test name="EdgeTest3">
-		<parameter name="browserType" value="edge"></parameter>
-		<parameter name="username" value="fn@gmail.com"></parameter>
-		<parameter name="password" value="fn@gmail.com"></parameter>
-		<classes>
-			<class name="com.codingmentor.project.shippingtests.ShippingAddressTest" />
-			<class name="com.codingmentor.project.shippingtests.ShippingAddressVerifyTest" />
-		</classes>
-	</test> <!-- Test -->
-
-	<test name="ChromeTest4">
-		<parameter name="browserType" value="chrome"></parameter>
-		<parameter name="username" value="fn@gmail.com"></parameter>
-		<parameter name="password" value="fn@gmail.com"></parameter>
-		<classes>
-			<class name="com.codingmentor.project.shippingtests.ShippingAddressTest" />
-			<class name="com.codingmentor.project.shippingtests.ShippingAddressVerifyTest" />
-		</classes>
-	</test> <!-- Test -->
-	
-	<test name="EdgeTest5">
-		<parameter name="browserType" value="edge"></parameter>
-		<parameter name="username" value="fn@gmail.com"></parameter>
-		<parameter name="password" value="fn@gmail.com"></parameter>
-		<classes>
-			<class name="com.codingmentor.project.shippingtests.ShippingAddressTest" />
-			<class name="com.codingmentor.project.shippingtests.ShippingAddressVerifyTest" />
-		</classes>
-	</test> <!-- Test -->
-
-	<test name="ChromeTest6">
-		<parameter name="browserType" value="chrome"></parameter>
-		<parameter name="username" value="fn@gmail.com"></parameter>
-		<parameter name="password" value="fn@gmail.com"></parameter>
-		<classes>
-			<class name="com.codingmentor.project.shippingtests.ShippingAddressTest" />
-			<class name="com.codingmentor.project.shippingtests.ShippingAddressVerifyTest" />
-		</classes>
-	</test> <!-- Test -->
 
 </suite> <!-- Suite -->

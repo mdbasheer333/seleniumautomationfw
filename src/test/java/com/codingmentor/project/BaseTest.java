@@ -7,6 +7,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import com.codingmentor.project.utils.PropertyUtil;
+
 public class BaseTest {
 
 	public WebDriver driver;
@@ -18,13 +20,13 @@ public class BaseTest {
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.get("https://askomdch.com/");
+			driver.get(PropertyUtil.getProperty("appUrl"));
 			driver.manage().window().maximize();
 			break;
 		case "edge":
 			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\msedgedriver.exe");
 			driver = new EdgeDriver();
-			driver.get("https://askomdch.com/");
+			driver.get(PropertyUtil.getProperty("appUrl"));
 			driver.manage().window().maximize();
 			break;
 		default:
