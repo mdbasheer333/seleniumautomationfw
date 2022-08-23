@@ -1,24 +1,41 @@
 package com.codingmentor.project.pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-	
+
 	WebDriver loginPageDriver;
-	
+
 	public LoginPage(WebDriver driver) {
-		loginPageDriver=driver; 
+		loginPageDriver = driver;
+		PageFactory.initElements(driver, this);
 	}
 
+	@FindBy(linkText = "Account")
+	WebElement linkAccount;
+
+	@FindBy(id = "username")
+	WebElement txtuserName;
+
+	@FindBy(css = "input[type='password']")
+	WebElement txtpassword;
+
+	@FindBy(xpath = "//input[@name='rememberme']")
+	WebElement chkBoxRemember;
+
+	@FindBy(xpath = "//button[text()='Log in']")
+	WebElement btnLogin;
+
 	public void login(String userName, String password) throws InterruptedException {
-		// login stage
-		loginPageDriver.findElement(By.linkText("Account")).click();
+		linkAccount.click();
 		Thread.sleep(2000);
-		loginPageDriver.findElement(By.id("username")).sendKeys(userName);
-		loginPageDriver.findElement(By.cssSelector("input[type='password']")).sendKeys(password);
-		loginPageDriver.findElement(By.xpath("//input[@name='rememberme']")).click();
-		loginPageDriver.findElement(By.xpath("//button[text()='Log in']")).click();
+		txtuserName.sendKeys(userName);
+		txtpassword.sendKeys(password);
+		chkBoxRemember.click();
+		btnLogin.click();
 	}
-	
+
 }

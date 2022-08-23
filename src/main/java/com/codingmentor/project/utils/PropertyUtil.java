@@ -13,7 +13,7 @@ public class PropertyUtil {
 		String propertyValue = null;
 		try {
 			fis = new FileInputStream(
-					new File(System.getProperty("user.dir") + "\\src\\main\\resources\\Properties.properties"));
+					new File(System.getProperty("user.dir") + "\\src\\main\\resources\\properties.properties"));
 			prop.load(fis);
 			propertyValue = prop.getProperty(key);
 		} catch (IOException e) {

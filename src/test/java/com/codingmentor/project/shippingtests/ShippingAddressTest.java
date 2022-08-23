@@ -1,6 +1,5 @@
 package com.codingmentor.project.shippingtests;
 
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.codingmentor.project.BaseTest;
@@ -11,9 +10,13 @@ import com.codingmentor.project.utils.PropertyUtil;
 public class ShippingAddressTest extends BaseTest{
 
 	@Test
-	@Parameters({"username","password"})
-	public void tc02_ShippingAddressTest(String uname, String pwd) throws InterruptedException {
 	
+	public void tc02_ShippingAddressTest() throws InterruptedException {
+	
+		
+		String uname=PropertyUtil.getProperty("userid");
+		String pwd=PropertyUtil.getProperty("password");
+		
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(uname, pwd);
 

@@ -4,8 +4,6 @@
 
 	<test name="EdgeTest1">
 		<parameter name="browserType" value="edge"></parameter>
-		<parameter name="username" value="fn@gmail.com"></parameter>
-		<parameter name="password" value="fn@gmail.com"></parameter>
 		<classes>
 			<class name="com.codingmentor.project.shippingtests.ShippingAddressTest" />
 			<class name="com.codingmentor.project.shippingtests.ShippingAddressVerifyTest" />
