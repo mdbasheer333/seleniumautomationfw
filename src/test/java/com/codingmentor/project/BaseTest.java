@@ -16,6 +16,13 @@ public class BaseTest {
 	@BeforeMethod
 	@Parameters({"browserType"})
 	public void tearUp(String browserType) throws Exception {
+		
+		String browTy=PropertyUtil.getProperty("browerToSelect");
+		
+		if(browTy!=null) {
+			browserType=browTy;
+		}
+		
 		switch (browserType) {
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\chromedriver.exe");
