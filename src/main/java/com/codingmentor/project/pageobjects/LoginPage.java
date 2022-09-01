@@ -4,13 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage {
-
-	WebDriver loginPageDriver;
+public class LoginPage extends BasePage{
 
 	public LoginPage(WebDriver driver) {
-		loginPageDriver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 
@@ -31,11 +31,17 @@ public class LoginPage {
 
 	public void login(String userName, String password) throws InterruptedException {
 		linkAccount.click();
-		Thread.sleep(2000);
+		waitForElement(txtuserName);
 		txtuserName.sendKeys(userName);
 		txtpassword.sendKeys(password);
 		chkBoxRemember.click();
+		waitForElementClickable(btnLogin);
 		btnLogin.click();
 	}
-
+	
+	public void logut() throws InterruptedException {
+		linkAccount.click();
+		waitForElementClickable(btnLogin);
+	}
+	
 }
